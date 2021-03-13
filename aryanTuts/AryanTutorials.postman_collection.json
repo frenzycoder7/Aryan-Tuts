@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "f3b4f643-495a-4c86-a096-b4dd1466aaa9",
+		"name": "AryanTutorials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "StudentLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"blackcoder56\",\n    \"password\":\"G@123aurav\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student/log-stu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"log-stu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Addmition",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Gaurav Singh",
+									"type": "text"
+								},
+								{
+									"key": "mobNum",
+									"value": "9262715527",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "blackcoder56",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "G@123aurav",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/home/jack/Downloads/Screenshot_20210115-161408_Instagram.png"
+								},
+								{
+									"key": "DOB",
+									"value": "06-08-2001",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student/stu-reg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"stu-reg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckUname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student/check/u-name/blackcoder56",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"check",
+								"u-name",
+								"blackcoder56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLoggedInStudentDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRjNjc5MGUzNTFhNTE0NDk0NDA0YWUiLCJhY2Nlc3MiOiJTb210aGluZyBBY2Nlc3MgQ09kZSIsImlhdCI6MTYxNTYyNjY4NX0.EiOPUnQPg5I-a_zljdrBsNAiw0UaJB3dXNAxt2w7r-M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/student/stud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"stud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnrolForBatch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRjNjc5MGUzNTFhNTE0NDk0NDA0YWUiLCJhY2Nlc3MiOiJTb210aGluZyBBY2Nlc3MgQ09kZSIsImlhdCI6MTYxNTYyNjY4NX0.EiOPUnQPg5I-a_zljdrBsNAiw0UaJB3dXNAxt2w7r-M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/student/enroll-batch/604bdbdb55881526a89adfbf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"enroll-batch",
+								"604bdbdb55881526a89adfbf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePendingEnrolledBatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRjNjc5MGUzNTFhNTE0NDk0NDA0YWUiLCJhY2Nlc3MiOiJTb210aGluZyBBY2Nlc3MgQ09kZSIsImlhdCI6MTYxNTYyNjY4NX0.EiOPUnQPg5I-a_zljdrBsNAiw0UaJB3dXNAxt2w7r-M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/student/dlt-enrolled-batch/604bdbb255881526a89adfb9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"dlt-enrolled-batch",
+								"604bdbb255881526a89adfb9"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Auth",
+					"item": [
+						{
+							"name": "AdminRegistration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "iamjack56",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "G@123aurav",
+											"type": "text"
+										},
+										{
+											"key": "adminImg",
+											"type": "file",
+											"src": "/home/jack/Downloads/pexels-cottonbro-5483075.jpg"
+										},
+										{
+											"key": "name",
+											"value": "Gaurav Singh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/reg-nadmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"reg-nadmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AdminLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"iamjack56\",\n    \"password\":\"G@123aurav\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/log-admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"log-admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminData",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Batches",
+					"item": [
+						{
+							"name": "AddBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"demo\",\n    \"batchDetails\":\"hjkbkgjhbnhmjgvn\",\n    \"batchTeacher\":\"Ram Sir\",\n    \"batchFee\":\"4000\",\n    \"batchSubjects\":[{\"courseName\":\"C++\",\"courseDetails\":\"Somthing is cooking\"},{\"courseName\":\"JAVA\",\"courseDetails\":\"Somthing is cooking\"}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/add-batch",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"add-batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteBatch",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/dlt-batch/604bdab514480625fb688fa2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"dlt-batch",
+										"604bdab514480625fb688fa2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBatches",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/all-batches",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"all-batches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateBatches",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"iamjack56\",\n    \"batchDetails\":\"hjkbkgjhbnhmjgvn\",\n    \"batchTeacher\":\"Ram Sir\",\n    \"batchFee\":\"4000\",\n    \"batchSubjects\":[{\"courseName\":\"C++++++++\",\"courseDetails\":\"Somthing is cooking\"},{\"courseName\":\"JAVA\",\"courseDetails\":\"Somthing is cooking\"}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin//update-batch/604bdbb255881526a89adfb9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"",
+										"update-batch",
+										"604bdbb255881526a89adfb9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddSubjectsToBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subjectList\":[{\"courseName\":\"Python\",\"courseDetails\":\"iamjack56\"},{\"courseName\":\"JavaScript\",\"courseDetails\":\"Somthing is cooking\"}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/add-subject-to-batch/604bdbd155881526a89adfbc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"add-subject-to-batch",
+										"604bdbd155881526a89adfbc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteSubject",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/delete-subjects-from-batch/604bdbd155881526a89adfbc/604be687f5cf0931fe8f91c1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"delete-subjects-from-batch",
+										"604bdbd155881526a89adfbc",
+										"604be687f5cf0931fe8f91c1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSingleBatch",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/single-batch/604bdbb255881526a89adfb9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"single-batch",
+										"604bdbb255881526a89adfb9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "DeleteStudent",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/delete-student/604c64e2dd5e9e0b78ea3d68",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"delete-student",
+										"604c64e2dd5e9e0b78ea3d68"
+									],
+									"query": [
+										{
+											"key": "admin_auth",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListAllStudent",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/list-all-student",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"list-all-student"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConfirmAddmition",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/confirm-student-addmition/604c6790e351a514494404ae",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"confirm-student-addmition",
+										"604c6790e351a514494404ae"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AcceptBatchRequest",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/accept-batch-enrollment/604c6790e351a514494404ae/604bdbdb55881526a89adfbf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"accept-batch-enrollment",
+										"604c6790e351a514494404ae",
+										"604bdbdb55881526a89adfbf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeneyBatchEnrollment",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "admin_auth",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDRiYzczMDQ2NzM4NTEwZTc1Njg2NzAiLCJhY2Nlc3MiOiJpYW1qYWNrNTYiLCJpYXQiOjE2MTU1Nzg5Mjh9.lspxtoGIsG7Wyc9j7IHQqcB3XZnlVO2ca7IzbGsEH2k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/deny-batch-enrollment/604c6790e351a514494404ae/604bdbd155881526a89adfbc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"deny-batch-enrollment",
+										"604c6790e351a514494404ae",
+										"604bdbd155881526a89adfbc"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
